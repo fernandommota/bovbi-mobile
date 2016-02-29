@@ -1,0 +1,85 @@
+body {
+    background-color:#e0e0e0;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:center;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width : 992px) {
+  .container{
+    width : 100%;
+  }
+}
+
+@media screen and (min-width :992px) {
+  .container{
+    width : 50%;
+  }
+}
+
+/* estilo para ajax */
+.modalClass {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;    
+    background: white;
+    -moz-opacity: 0.7; /* makes the div transparent, so you have a cool overlay effect */
+    filter: alpha(opacity=70);
+    opacity: .70;
+    z-index: 10000!important;
+}
+
+.ajaxload{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height:50%;
+    left: 25%; /* positions the div half way horizontally */
+    top: 25%;
+    position: fixed;
+    text-align:center;
+    z-index: 100;
+    display:block;
+}
+/* end estilo para ajax */
+
+.glyphicon-ok{
+    color : green;
+    float: right;
+    padding: 5px;
+}
+
+.glyphicon-remove{
+    color : red;
+    float: right;
+    padding: 5px;
+}
+
+.logo{
+  width: 210px;
+  height: 96px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+    Maia Informática
+    Fernando Maia da Mota
+    @fernandommota
+    -->
+<html ng-app="bovBiMobile">
+    <head>
+        <meta charset="utf-8" />
+        <!-- <meta name="format-detection" content="telephone=no" /> -->
+        <!-- <meta name="msapplication-tap-highlight" content="no" /> -->
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+
+        <!-- Codigos para design responsivo-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Bov BI Demo</title>
+        <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/index.css" rel="stylesheet" type="text/css">
+        <style>
+        </style>
+    </head>
+    <body ng-controller="bovBiMobileCtrl">
+        
+        <div class="modalClass" data-loading>
+            <div class="ajaxload">
+                <img src="img/ajax-loader.gif">
+            </div>
+        </div>
+        
+        <div class="container ">
+            <div class="jumbotron">
+                <!--logo beeftec --> 
+                <img src="icon.png" class="img-responsive center-block logo" alt="Logo Fernando Maia da Mota">
+                <h3 class="row-centered">Bov BI<br><small>Demo de apresentação</small></h3>
+                <hr>
+                
+                <button id="btn-access" type="button" class="btn btn-lg btn-primary btn-block" ng-disabled="service === true && internet === true ? false : true" onclick="openDeviceBrowser()">Acessar página de login
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
+                </button>
+            </div>
+            <hr>
+            <!--footer -->
+            <div class="small">
+                <h4>Fernando Maia da Mota<br><small>Consultoria em Business Intelligence</small></h4>
+                <p class="text-muted">Mobile +55(67)9636-8413 | Skype fernandomaiadamota</p>
+                <p class="text-muted">Rua Inácio de Souza, 723, CEP: 79.041-220 &bull; Campo Grande &bull; MS  | <a href="mailto:mota.fernandomaia@gmail.com.br">mota.fernandomaia@gmail.com.br</a></p>
+            </div>
+        </div>
+        <!-- end footer -->
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="libs/jquery/jquery-2.2.0.min.js"></script> 
+        <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="libs/angular/angular.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        
+        <script type="text/javascript">
+            app.initialize();
+            
+            //window.location('http://192.168.25.14:8080', '_self', 'location=no');
+            
+            function openDeviceBrowser (){  
+                window.open('http://localhost:8080', '_self', 'location=no');
+                
+            }       
+            
+            
+        </script>
+    </body>
+</html>
